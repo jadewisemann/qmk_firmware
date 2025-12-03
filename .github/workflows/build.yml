@@ -1,14 +1,16 @@
 name: Build my QMK configuration
 
-on:
+on:  
   push:
-    branches:
-      - master
-  pull_request: {}
+    paths:
+      - 'keyboards/**'
+
+
 
 jobs:
   build-qmk:
     runs-on: ubuntu-latest
+
 
     steps:
       - uses: actions/checkout@v4
